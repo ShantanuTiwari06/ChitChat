@@ -12,8 +12,19 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Animation Code STR
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = "⚡️StanChat"
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+        // Animation Code END
 
-       
     }
     
 

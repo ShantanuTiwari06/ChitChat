@@ -16,6 +16,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // send btn
     @IBAction func sendPressed(_ sender: UIButton) {
     }
 }
