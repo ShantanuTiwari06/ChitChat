@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -79,20 +79,12 @@
 			children = (
 				186EC972259DF8E900676495 /* AppDelegate.swift */,
 				186EC974259DF8E900676495 /* SceneDelegate.swift */,
-				186EC988259DFAF300676495 /* Model */,
 				186EC989259DFAF900676495 /* View */,
 				186EC98A259DFAFF00676495 /* Controller */,
 				186EC97B259DF8EC00676495 /* Assets.xcassets */,
 				186EC980259DF8EC00676495 /* Info.plist */,
 			);
 			path = ChatApp;
-			sourceTree = "<group>";
-		};
-		186EC988259DFAF300676495 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		186EC989259DFAF900676495 /* View */ = {
@@ -121,7 +113,6 @@
 				AB1717E809217965E7D12ABD /* Pods-ChatApp.debug.xcconfig */,
 				64D025F23E26F823B78921AC /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
