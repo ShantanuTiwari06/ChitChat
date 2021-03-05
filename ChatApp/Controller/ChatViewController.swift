@@ -13,17 +13,19 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    //MARK:- ViewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "⚡️ChitChat"
         navigationItem.hidesBackButton = true
     }
     
-    // send btn
+    //MARK:- Send Button
     @IBAction func sendPressed(_ sender: UIButton) {
+        
     }
     
-    
+    //MARK:- LogOut Button
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
