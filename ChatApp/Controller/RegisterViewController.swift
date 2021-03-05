@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription) // Give the error message which is understand by any user easily in his/her local language.
                 }else {
                     // Naviagate to chat vc.
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }
         }
