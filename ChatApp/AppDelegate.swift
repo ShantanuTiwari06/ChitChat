@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(db)
         
         IQKeyboardManager.shared.enable = true
-        
+        IQKeyboardManager.shared.enableAutoToolbar = false // to disable the toolbar of keyboard.
         return true
     }
 
