@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1857636825F2095D00B53467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1857636725F2095D00B53467 /* GoogleService-Info.plist */; };
 		1857637D25F2372E00B53467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857637C25F2372E00B53467 /* Constants.swift */; };
+		1857638125F243AA00B53467 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857638025F243AA00B53467 /* Message.swift */; };
+		185763BE25F2A88500B53467 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185763BC25F2A88500B53467 /* MessageCell.swift */; };
+		185763BF25F2A88500B53467 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185763BD25F2A88500B53467 /* MessageCell.xib */; };
 		186EC973259DF8E900676495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EC972259DF8E900676495 /* AppDelegate.swift */; };
 		186EC975259DF8E900676495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EC974259DF8E900676495 /* SceneDelegate.swift */; };
 		186EC977259DF8E900676495 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186EC976259DF8E900676495 /* WelcomeViewController.swift */; };
@@ -25,6 +28,9 @@
 		01BC38B5FF57E10A0A094F5A /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1857636725F2095D00B53467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1857637C25F2372E00B53467 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1857638025F243AA00B53467 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		185763BC25F2A88500B53467 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		185763BD25F2A88500B53467 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		186EC96F259DF8E900676495 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		186EC972259DF8E900676495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186EC974259DF8E900676495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1857637F25F2438700B53467 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1857638025F243AA00B53467 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		186EC966259DF8E900676495 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 			children = (
 				186EC972259DF8E900676495 /* AppDelegate.swift */,
 				186EC974259DF8E900676495 /* SceneDelegate.swift */,
+				1857637F25F2438700B53467 /* Model */,
 				186EC989259DFAF900676495 /* View */,
 				186EC98A259DFAFF00676495 /* Controller */,
 				186EC97B259DF8EC00676495 /* Assets.xcassets */,
@@ -98,6 +113,8 @@
 			children = (
 				186EC978259DF8E900676495 /* Main.storyboard */,
 				186EC97D259DF8EC00676495 /* LaunchScreen.storyboard */,
+				185763BC25F2A88500B53467 /* MessageCell.swift */,
+				185763BD25F2A88500B53467 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185763BF25F2A88500B53467 /* MessageCell.xib in Resources */,
 				186EC97F259DF8EC00676495 /* LaunchScreen.storyboard in Resources */,
 				1857636825F2095D00B53467 /* GoogleService-Info.plist in Resources */,
 				186EC97C259DF8EC00676495 /* Assets.xcassets in Resources */,
@@ -242,8 +260,10 @@
 				186EC975259DF8E900676495 /* SceneDelegate.swift in Sources */,
 				186EC991259DFC4F00676495 /* LoginViewController.swift in Sources */,
 				1857637D25F2372E00B53467 /* Constants.swift in Sources */,
+				1857638125F243AA00B53467 /* Message.swift in Sources */,
 				186EC994259DFC6500676495 /* ChatViewController.swift in Sources */,
 				186EC98E259DFC2E00676495 /* RegisterViewController.swift in Sources */,
+				185763BE25F2A88500B53467 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
