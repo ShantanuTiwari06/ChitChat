@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class ChatViewController: UIViewController {
 
@@ -61,6 +62,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async { // Good practice to reloadData of TableView.
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -78,6 +81,11 @@ class ChatViewController: UIViewController {
                     print("This is DB Error for saving data to FireStore : \(e)")
                 }else {
                     print("Success")
+                     
+                    // remember we are inside closure and trying to update UI. Remeber that we should tap into the dispatchQueue.main.async method so that this actually happens on the main thread. Rather than on a BG thread, which is where the code enclosure tend to take place.
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
                 }
             }
         }
@@ -105,9 +113,25 @@ extension ChatViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)  as! MessageCell
+        let message = messages[indexPath.row]
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)  as! MessageCell
         cell.label.text = messages[indexPath.row].body
+        
+        // This is the message from current user.
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: K.BrandColors.purple)
+        }
+        // This is the message from another sender.
+        else{
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+        }
         return cell
     }
 }
