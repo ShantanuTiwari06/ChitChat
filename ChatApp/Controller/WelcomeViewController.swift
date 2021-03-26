@@ -4,6 +4,12 @@
 //
 //  Created by Shantanu on 31/12/20.
 //
+// For testing purpose ---
+// Note :- 1.The user Id : 1@2.com ,pwd : 123456
+//         2.The user Id : a@b.com ,pwd : 123456
+
+// Otherwise if you want to make your own do register yourself by register option in app.
+
 import UIKit
 //import CLTypingLabel
 
